@@ -1,0 +1,30 @@
+package org.example;
+
+public class SickPeople {
+    private String name;
+    private int age;
+    private String illness;
+    private String description;
+    private String country;
+    private String city;
+    private String street;
+    private String house;
+    public String getFullAddress() {
+        StringBuilder result = new StringBuilder();
+        return result
+                .append(country)
+                .append(", ")
+                .append(city)
+                .append(", ")
+                .append(street)
+                .append(", ")
+                .append(house).toString();
+    }
+    public String getNameAge() {
+        StringBuilder result = new StringBuilder();
+        return result
+                .append(name)
+                .append(", ")
+                .append(age).toString();
+    }
+}

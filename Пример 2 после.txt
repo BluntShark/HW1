@@ -1,0 +1,58 @@
+package org.example;
+
+public class SickPeopleNew {
+    private String illness;
+    private Address address;
+    private Human human;
+
+    private String getFullAddress() {
+        return address.getFullAddress();
+    }
+    private String getNameAge(){
+        return human.getNameAge();
+    }
+}
+
+public class Human {
+    private String name;
+    private int age;
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+    public int getAge() {
+        return age;
+    }
+    public void setAge(int age) {
+        this.age = age;
+    }
+    public String getNameAge() {
+        StringBuilder result = new StringBuilder();
+        return result
+                .append(name)
+                .append(", ")
+                .append(age).toString();
+    }
+}
+
+public class Address {
+    private String country;
+    private String city;
+    private String street;
+    private String house;
+
+
+    public String getFullAddress() {
+        StringBuilder result = new StringBuilder();
+        return result
+                .append(country)
+                .append(", ")
+                .append(city)
+                .append(", ")
+                .append(street)
+                .append(", ")
+                .append(house).toString();
+    }
+}
